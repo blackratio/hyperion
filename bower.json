@@ -1,7 +1,7 @@
 {
-   "name": "dustbox",
+   "name": "Hyperion",
    "version": "0.1.1",
-   "description": "sandbox",
+   "description": "Hyperion module framework",
    "main": "index.html",
    "moduleType": [
       "es6",
