@@ -1,3 +1,3 @@
 # Hyperion
 
-Trully simple componant framework !
+Trully simple componants framework !
