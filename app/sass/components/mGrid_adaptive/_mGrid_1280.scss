@@ -1,0 +1,19 @@
+// Screen under 1280px
+
+@media all and (max-width: 1280px)
+{
+
+   .mgrid-row {
+      [class*='mColone-'] {
+         display: block;
+         float: none !important;
+         width: 100% !important;
+         margin: 0 0 10px 0 !important;
+      }
+      [class*='mColone-']:last-child {
+         margin-bottom: 0 !important;
+      }
+   }
+
+
+}

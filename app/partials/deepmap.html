@@ -1,0 +1,26 @@
+<div class="objecttest clearfix">
+   <div class="left" style="width: 50%; padding-right: 10px">
+      <h3 ng-if="!myCtrl.visData"><i class="fa fa-spinner fa-spin"></i> Loading timeline</h3>
+      <vis-graph data="myCtrl.visData"></vis-graph>
+      <div class="filter_infos clearfix">
+         <div class="left">
+            Total: {{myCtrl.jsonData.length}}/{{::myCtrl.jsonData.length}}
+         </div>
+         <div class="right">
+            Filtered:
+            <span ng-if="!selectedItem">All</span>
+            <span ng-if="selectedItem">{{selectedItem}}</span>
+         </div>
+      </div>
+      <h3 ng-if="!myCtrl.jsonData">
+         <i class="fa fa-spinner fa-spin"></i> Loading data
+      </h3>
+      <div ng-repeat="item in myCtrl.jsonData | filter: {gender: selectedItem||undefined}:true | orderBy:$index">
+         <span>{{::$index + 1}} - {{::item.techs}} - {{::item.name}}</span>
+      </div>
+   </div>
+   <div id="toto" class="left" style="width: 50%">
+      <div id="map"></div>
+      <d3-graph data="myCtrl.jsonData"></d3-graph>
+   </div>
+</div>

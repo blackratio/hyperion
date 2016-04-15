@@ -1,0 +1,48 @@
+{
+   "name": "dustbox",
+   "version": "0.1.1",
+   "description": "sandbox",
+   "main": "index.html",
+   "moduleType": [
+      "es6",
+      "globals",
+      "node"
+   ],
+   "keywords": [
+      "blank"
+   ],
+   "authors": [
+      "David Wieczorek"
+   ],
+   "license": "MIT",
+   "ignore": [
+      ".jshintrc",
+      "**/*.txt",
+      "bower_components",
+      "test",
+      "tests"
+   ],
+   "dependencies": {
+      "leaflet": "*",
+      "json3": "3.3.2",
+      "es5-shim": "4.1.0",
+      "jquery": "2.1.4",
+      "lodash": "4.0.0",
+      "angular": "1.4.8",
+      "angular-resource": "1.4.8",
+      "angular-ui-router": "0.2.15",
+      "ngstorage": "0.3.7",
+      "fontawesome": "4.5.0",
+      "angular-leaflet-directive": "*",
+      "leaflet.draw": "*",
+      "d3": "3.5.12",
+      "vis": "4.11.0",
+      "moment": "2.11.0",
+      "leaflet.markercluster": "*",
+      "PruneCluster": "*"
+   },
+   "devDependencies": {
+      "angular-mocks": "1.4.8",
+      "angular-scenario": "1.4.8"
+   }
+}

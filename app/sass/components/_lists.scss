@@ -1,0 +1,26 @@
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+/*************************************
+   LIST - HORISZONTAL
+*************************************/
+.list_h {
+   li {
+      float: left;
+      a {
+         display: block;
+         padding: 10px 13px;
+      }
+   }
+}
+.list_v {
+   li {
+      a {
+         display: block;
+         padding: 10px 13px;
+      }
+   }
+}

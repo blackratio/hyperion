@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	FLEX BOX GRID SYSTEM
+	//	Auteur : David Wieczorek
+	//	Année: 2015
+	//	Version: 0_1
+	//	Mail: Blackratio@gmail.com
+		@ Flex Box Grid System, based on new Flex Box CSS3 property
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+/*
+/////////////// FLEX DISTRIBUTION ITEM
+@ row (distribution horizontale, valeur par défaut)
+@ row-reverse (distribution horizontale inversée)
+@ column (distribution verticale)
+@ column-reverse (distribution verticale inversée)
+	flex-direction
+	flexDirection: row;
+/////////////// FLEX JUSTIFY ITEM
+@ flex-start (éléments positionnés au début du sens de lecture, valeur par défaut)
+@ flex-end (éléments positionnés à la fin)
+@ center (position centrale)
+@ space-between (répartition “justifiée”)
+@ space-around (variante de répartition “justifiée”)
+	justify-content
+	$flexPosition: flex-start;
+/////////////// FLEX ALIGN ITEM
+@ flex-start (au début)
+@ flex-end (à la fin)
+@ center (au centre)
+@ baseline (généralement identique à flex-start)
+@ stretch (étirés dans l’espace disponible, valeur par défaut)
+	align-items
+	$flexAlign: center;
+*/
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////
+	FLEXBOX WRAPPER @MIXIN & INCLUDE
+	//	Wrapp any item for flex them
+		@ $flexwrap FOR flax-wrap property
+		@ $flexDirection FOR flex-direction property
+		@ $flexPosition FOR justify-content property
+		@ $flexAlign FOR align-items property
+///////////////////////////////////////////////////////////////////////////*/
+
+@mixin flexbox-wrapper($flexWrap, $flexDirection, $flexPosition, $flexAlign) {
+ 	display: flex;
+	flex-wrap: $flexWrap;
+	flex-direction: $flexDirection;
+	justify-content: $flexPosition;
+	align-items: $flexAlign;
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////
+	FLEXBOX ITEM NUMBER @MIXIN & INCLUDE
+	//	Organize item with wrap options
+///////////////////////////////////////////////////////////////////////////*/
+
+@mixin flexbox-item-number($spacing, $itemRangeNumber) {
+	flex: 0 1 calc(100% * 1/#{$itemRangeNumber} - #{$spacing}*2);
+  	margin: $spacing;
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////
+	FLEXBOX ITEM ALIGN @MIXIN & INCLUDE
+	//	Organize item with alignment & margin options
+///////////////////////////////////////////////////////////////////////////*/
+
+@mixin flexbox-item-align($flexAlign, $margin) {
+	flex: 1;
+	align-items: $flexAlign;
+  	margin: $margin;
+}
+
+.flex_item_align {
+	@include flexbox-item-align(stretch, 0.5%);
+}
+
+
+
+.flex {
+   display: flex;
+   .flexBasic {
+      flex: 1;
+   }
+}
+
+
+[flex-direction="row"] {
+   @include flexbox-wrapper(wrap, row, flex-start, stretch);
+}
+
+[flex-direction="vertical"] {
+   @include flexbox-wrapper(wrap, vertical, flex-start, stretch);
+}
+
+
+
+[flex-number="1"] {
+   .flexItem {
+      @include flexbox-item-number(1.5%, 1);
+   }
+}
+[flex-number="2"] {
+   .flexItem {
+      @include flexbox-item-number(1.5%, 2);
+   }
+}
+[flex-number="3"] {
+   .flexItem {
+      @include flexbox-item-number(1.5%, 3);
+   }
+}
+[flex-number="4"] {
+   .flexItem {
+      @include flexbox-item-number(1.5%, 4);
+   }
+}
+[flex-number="5"] {
+   .flexItem {
+      @include flexbox-item-number(1.5%, 5);
+   }
+}
+[flex-number="6"] {
+   .flexItem {
+      @include flexbox-item-number(1.5%, 6);
+   }
+}

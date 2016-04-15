@@ -1,0 +1,7 @@
+<h5>{{::loc.name}}</h5>
+<h5>{{::loc.gender}}</h5>
+<div class="popup_list">
+	<div class="position">Lat: {{::loc.latitude}}</div>
+	<div class="position">Lng: {{::loc.longitude}}</div>
+</div>
+<a ui-sref="filterticket({foid: loc.filter_id, uid: loc.uid})">{{::loc.category}}</a>

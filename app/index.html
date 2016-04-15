@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="sandbox" ng-cloak>
+
+<head>
+   <meta charset="utf-8">
+   <title ng-bind="$state.current.data.pageTitle"></title>
+
+   <script src="libs/angular/angular.min.js"></script>
+   <script src="libs/jquery/dist/jquery.min.js"></script>
+   <script src="libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+
+   <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <script src="libs/leaflet/dist/leaflet.js"></script>
+   <script src="libs/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+   <script src="libs/leaflet.draw/dist/leaflet.draw.js"></script>
+   <script src="libs/ngstorage/ngstorage.min.js"></script>
+   <script src="libs/lodash/dist/lodash.min.js"></script>
+   <script src="libs/d3/d3.js"></script>
+   <script src="libs/vis/dist/vis.js"></script>
+   <script src="libs/moment/moment.js"></script>
+   <script src="http://cdn.babylonjs.com/2-2/babylon.max.js"></script>
+   <script src="libs/PruneCluster/dist/PruneCluster.js"></script>
+   <script src="scripts/app.js"></script>
+   <script src="scripts/assets/assets.js"></script>
+   <script src="scripts/assets/networks.js"></script>
+   <script src="scripts/services/object.js"></script>
+   <script src="scripts/services/networkServices.js"></script>
+   <script src="scripts/controllers/indexCtrl.js"></script>
+   <script src="scripts/controllers/objectCtrl.js"></script>
+   <script src="scripts/controllers/networkCtrl.js"></script>
+   <script src="scripts/directives/my_directives.js"></script>
+   <script src="scripts/services/lodash.js"></script>
+   <script src="scripts/services/services_index.js"></script>
+   <script src="scripts/assets/leaflet.featuredgroup.js"></script>
+
+   <link rel=stylesheet type="text/css" href="style/index.css">
+   <link rel=stylesheet type="text/css" href="libs/fontawesome/css/font-awesome.css">
+   <link rel=stylesheet type="text/css" href="libs/leaflet.draw/dist/leaflet.draw.css">
+   <link rel="stylesheet" href="libs/leaflet.markercluster/dist/MarkerCluster.css" />
+   <link rel="stylesheet" href="libs/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+   <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
+   <link rel="stylesheet" href="libs/vis/dist/vis.css">
+</head>
+
+<body ng-class="$state.current.data.mainSection" id="{{$state.current.data.section}}">
+   <div data-ng-include data-src="'partials/main_nav.html'"></div>
+   <div ui-view="main_content" id="mainWrapper"></div>
+   <!--footer class="content_section">
+      <div class="wrapp_box center clearfix">
+         <h5>Blackratio 2105</h5>
+      </div>
+   </footer-->
+</body>
+
+</html>
