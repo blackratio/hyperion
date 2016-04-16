@@ -1,13 +1,14 @@
 (function() {
 
    angular
-      .module('initRouter', ['ui.router'])
+      .module('initRouter', [
+         'ui.router'
+      ])
       .config(initProvider);
 
       ///////
 
    function initProvider($urlRouterProvider, $compileProvider, $logProvider) {
-      "use strict";
 
       // Pour toute route inapproprié
       $urlRouterProvider.otherwise('/');

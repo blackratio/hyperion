@@ -1,16 +1,16 @@
 (function() {
 
    angular
-      .module('routeHome', ['ui.router'])
+      .module('routeHome', [
+         'ui.router'
+      ])
       .config(configProvider);
 
    ///////
 
    function configProvider($stateProvider) {
-      "use strict";
 
       $stateProvider
-
          .state('home', {
             url: '/',
             views: {

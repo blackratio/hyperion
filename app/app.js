@@ -1,9 +1,6 @@
 (function() {
 
-   var services = angular.module('services', []);
-   var controllers = angular.module('controllers', []);
-   var directives = angular.module('directives', []);
-   var lodash = angular.module('lodash', []);
+   var utilities = angular.module('utilities', []);
    var home = angular.module('home', [
       'homeWelcome'
    ]);
@@ -15,10 +12,7 @@
    var hyperion = angular.module('hyperion', [
       'conf',
       'home',
-      'services',
-      'controllers',
-      'directives',
-      'lodash',
+      'utilities',
       'ngStorage',
    ]);
 

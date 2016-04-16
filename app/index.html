@@ -13,7 +13,7 @@
    <script src="libs/moment/moment.js"></script>
    <script src="app.js"></script>
    <script src="utils/routeprovider.js"></script>
-   <script src="utils/lodash.js"></script>
+   <script src="utils/utilities.js"></script>
    <script src="modules/home/home_router.js"></script>
    <script src="modules/home/home_controller.js"></script>
    <script src="scripts/assets/assets.js"></script>
@@ -24,7 +24,6 @@
 </head>
 
 <body ng-class="$state.current.data.mainSection" id="{{$state.current.data.section}}">
-   <div data-ng-include data-src="'modules/mainmenu/main_nav.html'"></div>
    <div ui-view="main_content" id="mainWrapper"></div>
 </body>
 
