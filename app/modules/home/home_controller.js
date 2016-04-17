@@ -1,12 +1,18 @@
 (function() {
 
-   angular.module('homeWelcome', [])
+   'use strict';
+
+   angular
+      .module('homeWelcome')
       .controller('homeController', homeIndex);
 
    ////////
 
    function homeIndex($scope) {
-      $scope.title = 'Welcome to Hyperion Home';
+      $scope.homeContent = {
+         title: 'Welcome to Hyperion Home',
+         subtitle: 'The modular Css Framework'
+      };
    }
 
    homeIndex.$inject = ['$scope'];

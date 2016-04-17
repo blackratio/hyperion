@@ -1,12 +1,14 @@
 (function() {
 
+'use strict';
+
    angular
       .module('initRouter', [
          'ui.router'
       ])
       .config(initProvider);
 
-      ///////
+   ///////
 
    function initProvider($urlRouterProvider, $compileProvider, $logProvider) {
 

@@ -1,28 +1,21 @@
 (function() {
 
-   var utilities = angular.module('utilities', []);
-   var home = angular.module('home', [
-      'homeWelcome'
-   ]);
-   var conf = angular.module('conf', [
+   'use strict';
+
+   angular.module('conf', [
       'initRouter',
-      'routeHome'
+      'utilities'
    ]);
 
-   var hyperion = angular.module('hyperion', [
+   angular.module('home', [
+      'homeWelcome'
+   ]);
+
+   angular.module('hyperion', [
       'conf',
       'home',
       'utilities',
       'ngStorage',
-   ]);
-
-   hyperion.run(['$rootScope', '$state', '$stateParams',
-      function($rootScope, $state, $stateParams) {
-
-         $rootScope.$state = $state;
-         $rootScope.$stateParams = $stateParams;
-
-      }
    ]);
 
 })();

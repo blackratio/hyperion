@@ -1,6 +1,11 @@
 (function(){
 
-   angular.module('utilities')
+'use strict';
+
+   angular.module('utilities', []);
+
+   angular
+      .module('utilities')
       .factory('_', lodashWindow);
 
       function lodashWindow($window){
@@ -9,7 +14,8 @@
 
       lodashWindow.$inject = ['window'];
 
-   angular.module('utilities')
+   angular
+      .module('utilities')
       .factory('moment', momentWindow);
 
       function momentWindow($window){

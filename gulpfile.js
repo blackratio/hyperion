@@ -98,7 +98,7 @@ gulp.task('html', function() {
 // JS tasks
 
 gulp.task('js', function() {
-   gulp.src('app/scripts/**/*.js');
+   gulp.src('app/**/*.js');
 });
 
 
@@ -143,8 +143,8 @@ gulp.task('dev', function() {
       server: "./app"
    });
    gulp.watch('app/sass/**/*.scss', ['sass']).on('change', browserSync.reload);
-   gulp.watch('app/partials/**/*.html', ['html']).on('change', browserSync.reload);
-   gulp.watch('app/scripts/**/*.js', ['js']).on('change', browserSync.reload);
+   gulp.watch('app/**/*.html', ['html']).on('change', browserSync.reload);
+   gulp.watch('app/**/*.js', ['js']).on('change', browserSync.reload);
 });
 
 

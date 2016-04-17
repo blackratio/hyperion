@@ -1,7 +1,7 @@
 (function() {
 
    angular
-      .module('routeHome', [
+      .module('homeWelcome', [
          'ui.router'
       ])
       .config(configProvider);
