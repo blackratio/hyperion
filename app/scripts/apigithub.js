@@ -10,15 +10,10 @@
             // optional method
             'getUser': function() {
 
-                var defer = $q.defer();
 
-                $http.get('https://api.github.com/users/blackratio').then(function(response) {
-                  defer.resolve(response.data);
-                }, function(response) {
-                  defer.reject(response);
-                });
-
-                return defer.promise;
+               return $http.get('https://api.github.com/users/blackratio').then(function(response) {
+               return response.data;
+             });
             }
         };
     }
