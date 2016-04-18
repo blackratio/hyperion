@@ -3,16 +3,19 @@
    'use strict';
 
    angular
-      .module('conf')
+      .module('conf', [
+         'conf.service'
+      ])
       .run(initRun);
 
    ////////
 
-   function initRun ($rootScope, $state, $stateParams) {
+   function initRun ($rootScope, $state, $stateParams, $httpProvider) {
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
+      //$httpProvider.interceptors.push('myHttpInterceptor');
    }
 
-   initRun.$inject = ['$rootScope', '$state', '$stateParams'];
+   initRun.$inject = ['$rootScope', '$state', '$stateParams', '$httpProvider'];
 
 })();

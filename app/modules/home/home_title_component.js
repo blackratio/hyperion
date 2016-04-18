@@ -8,14 +8,17 @@
 
       {
          bindings: {
-            title: '='
+            title: '=',
+            user: '='
          },
-         controller: 'homeController',
          template: function () {
             return `
                <div class="title_content">
-                  <h1>{{::homeContent.title}}</h1>
-                  <h2>{{::homeContent.subtitle}}</h2>
+                  <h1>{{::$ctrl.title.title}}</h1>
+                  <h2>{{::$ctrl.title.subtitle}}</h2>
+                  <div class="gituser">
+                     <h3>{{::$ctrl.user.login}}</h3>
+                     <h4><h3>{{::$ctrl.user.url}}</h4>
                </div>
             `;
          }

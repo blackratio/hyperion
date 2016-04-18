@@ -3,18 +3,25 @@
    'use strict';
 
    angular
-      .module('homeWelcome')
+      .module('homeWelcome', [
+         'homeWelcome.service'
+      ])
       .controller('homeController', homeIndex);
 
    ////////
 
-   function homeIndex($scope) {
+   function homeIndex($scope, githubApi) {
       $scope.homeContent = {
          title: 'Welcome to Hyperion Home',
          subtitle: 'The modular Css Framework'
       };
+      githubApi.getUser().then(function(response) {
+         console.log(response);
+         $scope.user = response;
+      });
+
    }
 
-   homeIndex.$inject = ['$scope'];
+   homeIndex.$inject = ['$scope', 'githubApi'];
 
 })();

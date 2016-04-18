@@ -8,7 +8,8 @@
    ]);
 
    angular.module('home', [
-      'homeWelcome'
+      'homeWelcome',
+      'homeWelcome.router'
    ]);
 
    angular.module('hyperion', [
