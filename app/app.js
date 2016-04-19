@@ -15,7 +15,6 @@
    angular.module('hyperion', [
       'conf',
       'home',
-      'utilities',
       'ngStorage',
    ]);
 

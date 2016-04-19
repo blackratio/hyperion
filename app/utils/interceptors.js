@@ -1,44 +1,28 @@
 (function() {
-    'use strict';
 
-    angular
-        .module('conf.service', [])
-        .factory('myHttpInterceptor', myHttpInterceptorFunction);
+   'use strict';
 
-    function myHttpInterceptorFunction($q) {
-        return {
-            // optional method
-            'request': function(config) {
-                // do something on success
-                return config;
-            },
+   angular
+      .module('conf.interceptors', [])
+      .factory('myHttpInterceptor', myHttpInterceptorFunction);
 
-            // optional method
-            'requestError': function(rejection) {
-                // do something on error
-                if (canRecover(rejection)) {
-                    return responseOrNewPromise
-                }
-                return $q.reject(rejection);
-            },
+   function myHttpInterceptorFunction($q) {
+      return {
+         'request': function(config) {
+            return config;
+         },
+         'requestError': function(rejection) {
+            return $q.reject(rejection);
+         },
+         'response': function(response) {
+            return response;
+         },
+         'responseError': function(rejection) {
+            return $q.reject(rejection);
+         }
+      };
+   }
 
-            // optional method
-            'response': function(response) {
-                // do something on success
-                return response;
-            },
-
-            // optional method
-            'responseError': function(rejection) {
-                // do something on error
-                if (canRecover(rejection)) {
-                    return responseOrNewPromise
-                }
-                return $q.reject(rejection);
-            }
-        };
-    }
-
-    myHttpInterceptorFunction.$inject = ['$q'];
+   myHttpInterceptorFunction.$inject = ['$q'];
 
 })();
