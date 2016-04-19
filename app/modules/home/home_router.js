@@ -21,7 +21,7 @@
             },
             data: {
                mainSection: 'framework',
-               pageTitle: 'Welcome to Hyperion',
+               windowTitle: 'Hyperion, the modular CSS framework',
                section: 'home'
             }
          });

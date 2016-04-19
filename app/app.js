@@ -4,6 +4,7 @@
 
    angular.module('conf', [
       'initRouter',
+      'initRun',
       'utilities'
    ]);
 
