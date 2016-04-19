@@ -6,7 +6,7 @@
       .module('homeWelcome.service', [])
       .factory('githubApi', githubApiFunction);
 
-   function githubApiFunction($q, $http) {
+   function githubApiFunction($http) {
       return {
          'getUser': function() {
             return $http.get('https://api.github.com/users/blackratio')
@@ -19,6 +19,6 @@
       };
    }
 
-   githubApiFunction.$inject = ['$q', '$http'];
+   githubApiFunction.$inject = ['$http'];
 
 })();
