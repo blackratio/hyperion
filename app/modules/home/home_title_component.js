@@ -4,9 +4,7 @@
 
    angular
       .module('homeWelcome')
-      .component('homeTitle',
-
-      {
+      .component('homeTitle', {
          bindings: {
             title: '=',
             user: '='

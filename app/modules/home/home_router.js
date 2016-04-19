@@ -1,5 +1,7 @@
 (function() {
 
+   'use strict';
+
    angular
       .module('homeWelcome.router', [
          'ui.router'
@@ -9,7 +11,6 @@
    ///////
 
    function configProvider($stateProvider) {
-
       $stateProvider
          .state('home', {
             url: '/',
@@ -25,7 +26,6 @@
                section: 'home'
             }
          });
-
    }
 
    configProvider.$inject = ['$stateProvider'];

@@ -6,6 +6,8 @@
       .module('conf.interceptors', [])
       .factory('myHttpInterceptor', myHttpInterceptorFunction);
 
+   ///////
+
    function myHttpInterceptorFunction($q) {
       return {
          'request': function(config) {
