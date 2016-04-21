@@ -20,26 +20,11 @@
 /* Typography */
 @import 'components/typography';
 
-/* Links */
-@import 'components/lists';
-
-/* Buttons */
-@import 'components/buttons';
-
 /* Forms */
 @import 'components/forms';
 
-/* Links */
-@import 'components/links';
-
-/* Block */
-@import 'components/block';
-
 /* Flex Grid */
 @import 'components/flexGrid';
-
-/* Effect */
-@import 'components/effect';
 
 /* Helpers */
 @import 'components/helpers';
@@ -49,14 +34,3 @@
 
 /* STYLE */
 @import 'style';
-
-/* Meshuggrid */
-@import 'd3';
-
-
-
-#renderCanvas {
-   width   : 100%;
-   height  : 100%;
-   touch-action: none;
-}
