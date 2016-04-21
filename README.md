@@ -1,6 +1,6 @@
 # Hyperion
 
-> Simple & Fresh Materials Framework !
+> Modular SASS/CSS Framework !
 
 ### Installation ( not implemented -> soon )
 

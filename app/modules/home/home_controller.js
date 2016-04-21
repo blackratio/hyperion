@@ -6,21 +6,21 @@
       .module('homeWelcome', [
          'homeWelcome.service'
       ])
-      .controller('homeController', homeIndex);
+      .controller('homeController', homeControllerFunction);
+
+   homeControllerFunction.$inject = ['$scope', 'homeFactoryRequest'];
 
    ////////
 
-   function homeIndex($scope, githubApi) {
-      var homeTitle = {
-         title: 'Welcome to Hyperion Home',
-         subtitle: 'The modular Css Framework'
+   function homeControllerFunction($scope, homeFactoryRequest) {
+      let homeTitle = {
+         title: 'Hyperion',
+         subtitle: 'Modular SASS/CSS Framework !'
       };
       $scope.homeContent = homeTitle;
-      githubApi.getUser().then(function(data) {
+      homeFactoryRequest.gitHub().then(function(data) {
          $scope.user = data;
       });
    }
-
-   homeIndex.$inject = ['$scope', 'githubApi'];
 
 })();

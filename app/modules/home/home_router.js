@@ -22,7 +22,7 @@
             },
             data: {
                mainSection: 'framework',
-               windowTitle: 'Hyperion, the modular CSS framework',
+               windowTitle: 'Hyperion, Modular SASS/CSS Framework',
                section: 'home'
             }
          });
