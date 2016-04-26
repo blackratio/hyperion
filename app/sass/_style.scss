@@ -40,13 +40,33 @@ body {
    width: 50%;
    margin: 0 auto;
    padding: 20px;
-   border: 1px solid #ddd;
+   border: 1px solid $iron;
 }
 
 .wrapp_box {
    margin: 0 auto;
    max-width: 100%;
    padding: 50px 40px;
+   section {
+      border-radius: 2px;
+      padding: 20px;
+      border: 1px solid $iron;
+      margin: 0 0 45px 0;
+   }
+   .bloc_title {
+      h2 {
+         padding-left: 10px;
+         border-left: 4px solid $rebecca;
+      }
+      h3 {
+         text-decoration: underline;
+         margin-bottom: 10px;
+      }
+      h4 {
+         font-style: italic;
+         padding-left: 14px;
+      }
+   }
 }
 
 .mgrid-row {
