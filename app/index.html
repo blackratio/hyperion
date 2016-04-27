@@ -4,6 +4,14 @@
 <head>
    <meta charset="utf-8">
    <title ng-bind="$state.current.data.windowTitle"></title>
+   <link rel=stylesheet type="text/css" href="style/index.css">
+   <link rel=stylesheet type="text/css" href="libs/fontawesome/css/font-awesome.css">
+   <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-class="$state.current.data.mainSection" id="{{$state.current.data.section}}">
+
+   <div ui-view="main_content"></div>
 
    <script src="libs/angular/angular.min.js"></script>
    <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -21,15 +29,7 @@
    <script src="modules/home/home_factory.js"></script>
    <script src="modules/home/home_title_component.js"></script>
    <script src="scripts/assets/assets.js"></script>
-
-
-   <link rel=stylesheet type="text/css" href="style/index.css">
-   <link rel=stylesheet type="text/css" href="libs/fontawesome/css/font-awesome.css">
-   <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
-</head>
-
-<body ng-class="$state.current.data.mainSection" id="{{$state.current.data.section}}">
-   <div ui-view="main_content" id="mainWrapper"></div>
+   
 </body>
 
 </html>
