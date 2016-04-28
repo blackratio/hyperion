@@ -13,13 +13,17 @@
    ////////
 
    function homeControllerFunction($scope, homeFactoryRequest) {
+      /* jshint validthis: true */
+      const vm = this;
+
       let homeTitle = {
          title: 'Hyperion',
          subtitle: 'Modular SASS/CSS Framework !'
       };
-      $scope.homeContent = homeTitle;
+
+      vm.homeContent = homeTitle;
       homeFactoryRequest.gitHub().then(function(data) {
-         $scope.user = data;
+         vm.user = data;
       });
    }
 
