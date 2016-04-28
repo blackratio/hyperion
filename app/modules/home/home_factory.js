@@ -3,14 +3,14 @@
    'use strict';
 
    angular
-      .module('homeWelcome.service', [])
-      .factory('homeFactoryRequest', homeFactoryRequestFunction);
+      .module('homePage.factory', [])
+      .factory('homeFactory', homeFactory);
 
-   homeFactoryRequestFunction.$inject = ['$http'];
+   homeFactory.$inject = ['$http'];
 
    ////////
 
-   function homeFactoryRequestFunction($http) {
+   function homeFactory($http) {
       return {
          gitHub: function() {
             const url = 'https://api.github.com/users/';

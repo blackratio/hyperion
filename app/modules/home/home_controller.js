@@ -3,16 +3,16 @@
    'use strict';
 
    angular
-      .module('homeWelcome', [
-         'homeWelcome.service'
+      .module('homePage', [
+         'homePage.factory'
       ])
-      .controller('homeController', homeControllerFunction);
+      .controller('homeController', homeController);
 
-   homeControllerFunction.$inject = ['$scope', 'homeFactoryRequest'];
+   homeController.$inject = ['homeFactory'];
 
    ////////
 
-   function homeControllerFunction($scope, homeFactoryRequest) {
+   function homeController(homeFactory) {
       /* jshint validthis: true */
       const vm = this;
 
@@ -22,7 +22,7 @@
       };
 
       vm.homeContent = homeTitle;
-      homeFactoryRequest.gitHub().then(function(data) {
+      homeFactory.gitHub().then(function(data) {
          vm.user = data;
       });
    }
