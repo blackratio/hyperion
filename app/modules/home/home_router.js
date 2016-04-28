@@ -17,7 +17,7 @@
             views: {
                'main_content': {
                   templateUrl: 'modules/home/home.html',
-                  controller: 'homeController'
+                  controller: 'homeController as homeVm'
                }
             },
             data: {
