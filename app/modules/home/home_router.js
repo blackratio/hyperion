@@ -3,7 +3,7 @@
    'use strict';
 
    angular
-      .module('homeWelcome.router', [
+      .module('homePage.router', [
          'ui.router'
       ])
       .config(configProvider);

@@ -35,7 +35,7 @@
    ////////
 
    angular
-   .module('homeWelcome')
+   .module('homePage')
    .component('homeTitle', loadComponent);
 
 })();
