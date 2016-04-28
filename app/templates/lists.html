@@ -5,25 +5,15 @@
 
 <section id="typography">
    <div class="bloc_title">
-      <h3>Vertical Unorder List</h3>
+      <h3>{{::homeVm.frameWorkDatas.lists.lists_v_unorderlist}}</h3>
    </div>
    <ul>
-      <li>list 1</li>
-      <li>list 2</li>
-      <li>list 3</li>
-      <li>list 4</li>
-      <li>list 5</li>
-      <li>list 6</li>
+      <li ng-repeat="list in homeVm.frameWorkDatas.generic.lists_content">{{list.content}}</li>
    </ul>
    <div class="bloc_title">
-      <h3>Vertical Order List</h3>
+      <h3>{{::homeVm.frameWorkDatas.lists.lists_v_orderlist}}</h3>
    </div>
    <ol>
-      <li>list 1</li>
-      <li>list 2</li>
-      <li>list 3</li>
-      <li>list 4</li>
-      <li>list 5</li>
-      <li>list 6</li>
+      <li ng-repeat="list in homeVm.frameWorkDatas.generic.lists_content">{{list.content}}</li>
    </ol>
 </section>
