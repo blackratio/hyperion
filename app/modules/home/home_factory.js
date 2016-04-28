@@ -21,6 +21,14 @@
             }).catch(function() {
                console.log('Problem :/');
             });
+         },
+         frameworkContent: function() {
+            return $http.get('datas/app.json')
+            .then(function(response) {
+               return response.data;
+            }).catch(function() {
+               console.log('Problem :/');
+            });
          }
       };
    }

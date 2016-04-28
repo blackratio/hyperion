@@ -22,8 +22,9 @@
       };
 
       vm.homeContent = homeTitle;
-      homeFactory.gitHub().then(function(data) {
-         vm.user = data;
+
+      homeFactory.frameworkContent().then(function(data) {
+         vm.frameWorkDatas = data;
       });
    }
 
