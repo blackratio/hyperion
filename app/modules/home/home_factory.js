@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
    'use strict';
 
@@ -12,23 +12,23 @@
 
    function homeFactory($http) {
       return {
-         gitHub: function() {
+         gitHub: function () {
             const url = 'https://api.github.com/users/';
             const user = 'blackratio';
-            return $http.get(url+user)
-            .then(function(response) {
-               return response.data;
-            }).catch(function() {
-               console.log('Problem :/');
-            });
+            return $http.get(url + user)
+               .then(function (response) {
+                  return response.data;
+               }).catch(function () {
+                  console.log('Problem :/');
+               });
          },
-         frameworkContent: function() {
+         frameworkContent: function () {
             return $http.get('datas/app.json')
-            .then(function(response) {
-               return response.data;
-            }).catch(function() {
-               console.log('Problem :/');
-            });
+               .then(function (response) {
+                  return response.data;
+               }).catch(function () {
+                  console.log('Problem :/');
+               });
          }
       };
    }
