@@ -1,9 +1,9 @@
-(function() {
+(function () {
 
    'use strict';
 
    angular
-      .module('homeWelcome.router', [
+      .module('homePage.router', [
          'ui.router'
       ])
       .config(configProvider);
@@ -17,12 +17,12 @@
             views: {
                'main_content': {
                   templateUrl: 'modules/home/home.html',
-                  controller: 'homeController'
+                  controller: 'homeController as homeVm'
                }
             },
             data: {
                mainSection: 'framework',
-               windowTitle: 'Hyperion, the modular CSS framework',
+               windowTitle: 'Hyperion, Modular SASS/CSS Framework',
                section: 'home'
             }
          });

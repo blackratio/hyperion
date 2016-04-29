@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*********************************************************************************
 **********************************************************************************
 
@@ -13,24 +12,15 @@
 
 /* RESET */
 @import 'reset';
-
 /* COLOR MANAGER */
 @import 'colorManager';
-
 /* Typography */
 @import 'components/typography';
-
-/* Forms */
-@import 'components/forms';
-
 /* Flex Grid */
 @import 'components/flexGrid';
-
-/* Helpers */
-@import 'components/helpers';
-
 /* Meshuggrid */
 @import 'components/mGrid';
-
+/* Lists */
+@import 'components/lists';
 /* STYLE */
 @import 'style';

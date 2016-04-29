@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
    'use strict';
 
@@ -9,8 +9,8 @@
    ]);
 
    angular.module('home', [
-      'homeWelcome',
-      'homeWelcome.router'
+      'homePage',
+      'homePage.router'
    ]);
 
    angular.module('hyperion', [

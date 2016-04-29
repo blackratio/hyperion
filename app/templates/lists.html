@@ -1,0 +1,19 @@
+<div class="bloc_title">
+   <h2>{{::homeVm.frameWorkDatas.lists.lists_title}}</h2>
+   <h4>{{::homeVm.frameWorkDatas.lists.lists_subtitle}}</h4>
+</div>
+
+<section id="typography">
+   <div class="bloc_title">
+      <h3>{{::homeVm.frameWorkDatas.lists.lists_v_unorderlist}}</h3>
+   </div>
+   <ul>
+      <li ng-repeat="list in homeVm.frameWorkDatas.generic.lists_content">{{list.content}}</li>
+   </ul>
+   <div class="bloc_title">
+      <h3>{{::homeVm.frameWorkDatas.lists.lists_v_orderlist}}</h3>
+   </div>
+   <ol>
+      <li ng-repeat="list in homeVm.frameWorkDatas.generic.lists_content">{{list.content}}</li>
+   </ol>
+</section>

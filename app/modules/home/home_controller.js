@@ -1,26 +1,56 @@
-(function() {
+(function () {
 
    'use strict';
 
    angular
-      .module('homeWelcome', [
-         'homeWelcome.service'
+      .module('homePage', [
+         'homePage.factory'
       ])
-      .controller('homeController', homeIndex);
+      .controller('homeController', homeController);
+
+   homeController.$inject = ['homeFactory'];
 
    ////////
 
-   function homeIndex($scope, githubApi) {
-      var homeTitle = {
-         title: 'Welcome to Hyperion Home',
-         subtitle: 'The modular Css Framework'
-      };
-      $scope.homeContent = homeTitle;
-      githubApi.getUser().then(function(data) {
-         $scope.user = data;
-      });
-   }
+   function homeController(homeFactory) {
+      /* jshint validthis: true */
+      const vm = this;
 
-   homeIndex.$inject = ['$scope', 'githubApi'];
+      let homeTitle = {
+         title: 'Hyperion',
+         subtitle: 'Modular SASS/CSS Framework !'
+      };
+
+      vm.homeContent = homeTitle;
+
+      homeFactory.frameworkContent().then(function (data) {
+         vm.frameWorkDatas = data;
+      });
+
+      /* constructeur de ClasseA */
+      function monContructeur(a, b, c, d) {
+         this.nom = a;
+         this.prenom = b;
+         this.age = c;
+         this.sex = d;
+      }
+
+      /* methodes de ClasseA */
+      monContructeur.prototype.createID = function () {
+         return ({
+            'nom': this.nom,
+            'prenom': this.prenom,
+            'age': this.nom,
+            'sex': this.prenom
+         });
+      };
+
+      var test1 = new monContructeur('jean', 'michel', 31, 'Homme');
+      var test2 = new monContructeur('Bruno', 'poulpe', 59, 'Homme');
+
+      test1.createID();
+      test2.createID();
+
+   }
 
 })();
