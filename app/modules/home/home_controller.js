@@ -48,7 +48,8 @@
       var test1 = new monContructeur('jean', 'michel', 31, 'Homme');
       var test2 = new monContructeur('Bruno', 'poulpe', 59, 'Homme');
 
-      console.log(test1.createID(), test2.createID());
+      test1.createID();
+      test2.createID();
 
    }
 
