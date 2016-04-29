@@ -20,5 +20,11 @@
       "lists_subtitle": "All type of lists",
       "lists_v_unorderlist": "Vertical Unorder List",
       "lists_v_orderlist": "Vertical Order List"
+   },
+   "flexgrid": {
+      "flexgrid_title": "Meshuggrid",
+      "flexgrid_subtitle": "Flexbox Grid, usefull and very simple",
+      "flexgrid_basic": "Basic and common use",
+      "flexgrid_sofisticated": "More Sofisticated grid with non linear width"
    }
 }
