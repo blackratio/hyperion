@@ -1,18 +1,19 @@
 $list_padding: 5px;
-$list_unorder_ico: "\f105";
+$list_unorder_icon: "\f105";
 
 ul {
    padding: 5px;
    list-style: none;
    li:before {
       font-family: FontAwesome;
-      content: $list_unorder_ico;
+      content: $list_unorder_icon;
       margin-right: 10px;
    }
    li {
       padding: $list_padding;
    }
 }
+
 ol {
    padding: 5px 20px;
    li {
