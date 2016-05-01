@@ -5,7 +5,7 @@
 	MESHUGGRID GRID SYSTEM
 	//	Auteur : David Wieczorek
 	//	Année: 2016
-	//	Version: 0.2
+	//	Version: 0.3
 	//	Mail: blackratio@gmail.com
 		@ Sass Grid with flexBox inside
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,7 +33,6 @@
       width: 100%;
    }
 
-
    @mixin grid-config($number: $column-number) {
 
      @for $i from 1 through $number {
@@ -55,7 +54,6 @@
    }
 
    @include grid-config();
-
 
    [class*='#{$column-prefix}'] {
      &.right {
@@ -81,5 +79,5 @@
 ////////
 ///RESPONSIVE ADAPTIVE
 ///
-/* Typography */
-@import 'mGrid_adaptive/mGrid_1280';
+///
+@import 'meshuggrid_adaptive/meshuggrid_1280';
