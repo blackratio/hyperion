@@ -1,24 +1,39 @@
 @charset "UTF-8";
-/*********************************************************************************
-**********************************************************************************
 
- * Author : David Wieczorek
- * Name : MESHUGGRID
- * Version : 0.1
- * Date : 27/05/2015
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////
+//////////  HYPERION
+//////////  Simpe CSS Framework
 
-**********************************************************************************
-**********************************************************************************/
+///	Author : David Wieczorek
+///	Date: 2016
+///	Version: 0.1
+///	Mail: blackratio@gmail.com
 
-/* RESET */
+
+/* @Import Structure
+   ========================================================================== */
+
+/**
+ * Reset html style with normalise.css
+ */
 @import 'reset';
-/* COLOR MANAGER */
+
+/**
+ * Color settings
+ */
 @import 'colormanager';
-/* Typography */
+
+/**
+ * Style Typogrpahy
+ */
 @import 'components/typography';
-/* Meshuggrid flexgrid module*/
+
+/* Meshuggrid*/
 @import 'components/meshuggrid';
+
 /* Lists */
 @import 'components/lists';
-/* STYLE */
+
+/* Style */
 @import 'style';

@@ -1,83 +1,69 @@
 @charset "UTF-8";
 
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	MESHUGGRID GRID SYSTEM
-	//	Auteur : David Wieczorek
-	//	Année: 2016
-	//	Version: 0.3
-	//	Mail: blackratio@gmail.com
-		@ Sass Grid with flexBox inside
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////  MeshugGRID SYSTEM
+
+///	Author : David Wieczorek
+///	Date: 2016
+///	Version: 0.1
+///	Mail: blackratio@gmail.com
 
 
-/// Meshuggrid mixin function
-/// @group Grid Mixin
-/// @author David Wieczorek
-/// @param {number} $column-number - Colum number needed
-/// @param {percent} $gutters-width - Gutter width you want
-/// @param {name} $column-prefix- Choose Column Class prefix
-/// @example scss - Use case exemple
-///   @include meshuggrid(12, 1.2%, mColone-);
-///   // Hello Meshigrid result
-/// @since version
+/* ========================================================================== */
 
+
+/**
+ * 1. Add meshuggrid($column-number, $gutters-width, $column-prefix)
+ * 2. Configure properties :
+ * 	$column-number : 12
+ * 	$gutters-width : 0.5%
+ * 	$column-prefix : mColone-
+ * 3. Add HTML elements with selected class
+ */
 @mixin meshuggrid($column-number, $gutters-width, $column-prefix) {
 
-   // Adding clearfix to Meshuggrid wrapper
+   /**
+    * CLear grid wrapper
+    */
    .mgrid-row {
       content: "";
       display: table;
       clear: both;
       width: 100%;
    }
-
    @mixin grid-config($number: $column-number) {
-
-     @for $i from 1 through $number {
-        .#{$column-prefix + $i} {
-           width: 100% / $number * $i;
-        }
-     }
-
-     @for $i from 1 through $number {
-
+      @for $i from 1 through $number{
+         .#{$column-prefix + $i} {
+            width: 100% / $number * $i;
+         }
+      }
+      @for $i from 1 through $number {
          $width-of-a-column: ( 100% - $gutters-width * ($number - 1) ) / $number;
-
          .mgutters .#{$column-prefix + $i} {
             width: $width-of-a-column * $i + $gutters-width * ($i - 1);
             content: $gutters-width * ($i - 1);
          }
-
-     }
+      }
    }
-
    @include grid-config();
-
    [class*='#{$column-prefix}'] {
-     &.right {
-        float: right;
-     }
-     img {
-        max-width: 100%;
-     }
+      &.right {
+         float: right;
+      }
+      img {
+         max-width: 100%;
+      }
    }
-
    [class*='#{$column-prefix}'] {
       float: left;
    }
-
    .mgutters [class*='#{$column-prefix}'] {
-     margin-left: $gutters-width;
-     &:first-child { margin-left: 0; }
+      margin-left: $gutters-width;
+      &:first-child {
+         margin-left: 0;
+      }
    }
-
 }
 
-
-////////
-///RESPONSIVE ADAPTIVE
-///
-///
+/// ADAPTIVE GRID
 @import 'meshuggrid_adaptive/meshuggrid_1280';
