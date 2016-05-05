@@ -31,6 +31,7 @@
       clear: both;
       width: 100%;
    }
+
    @mixin grid-config($number: $column-number) {
       @for $i from 1 through $number{
          .#{$column-prefix + $i} {
@@ -45,7 +46,9 @@
          }
       }
    }
+
    @include grid-config();
+
    [class*='#{$column-prefix}'] {
       &.right {
          float: right;
@@ -54,15 +57,18 @@
          max-width: 100%;
       }
    }
+
    [class*='#{$column-prefix}'] {
       float: left;
    }
+
    .mgutters [class*='#{$column-prefix}'] {
       margin-left: $gutters-width;
       &:first-child {
          margin-left: 0;
       }
    }
+
 }
 
 /// ADAPTIVE GRID

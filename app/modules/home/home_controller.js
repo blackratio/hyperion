@@ -27,7 +27,7 @@
          vm.frameWorkDatas = data;
       });
 
-      /* constructeur de ClasseA */
+      /* constructeur */
       function monContructeur(a, b, c, d) {
          this.nom = a;
          this.prenom = b;
@@ -35,7 +35,7 @@
          this.sex = d;
       }
 
-      /* methodes de ClasseA */
+      /* methodes de monContructeur */
       monContructeur.prototype.createID = function () {
          return ({
             'nom': this.nom,
@@ -50,6 +50,22 @@
 
       test1.createID();
       test2.createID();
+
+      class SimpleDate {
+         constructor(year, month, day) {
+            this._year = year;
+            this._month = month;
+            this._day = day;
+         }
+         getDay() {
+            return this._day;
+         }
+      }
+
+      let today = new SimpleDate(2000, 2, 28);
+      let test = today.getDay();
+
+      console.log(test);
 
    }
 
