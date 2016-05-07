@@ -1,0 +1,9 @@
+<label>Please enter your name: </label>
+<input ng-model="homeVm.currentCustomer.name" />
+<button ng-click="homeVm.join(homeVm.currentCustomer)">Join</button>
+<br/>
+
+<h3>New Customers:</h3>
+<ul>
+   <li ng-repeat="customer in homeVm.newCustomers">{{customer.name}}</li>
+</ul>

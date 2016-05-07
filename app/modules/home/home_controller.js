@@ -4,15 +4,16 @@
 
    angular
       .module('homePage', [
-         'homePage.factory'
+         'homePage.factory',
+         'homePage.socketfactory'
       ])
       .controller('homeController', homeController);
 
-   homeController.$inject = ['homeFactory'];
+   homeController.$inject = ['homeFactory', 'socket', '$scope'];
 
    ////////
 
-   function homeController(homeFactory) {
+   function homeController(homeFactory, socket, $scope) {
       /* jshint validthis: true */
       const vm = this;
 
@@ -65,7 +66,22 @@
       let today = new SimpleDate(2000, 2, 28);
       let test = today.getDay();
 
-      console.log(test);
+      //console.log(test);
+
+
+      vm.newCustomers = [];
+      vm.currentCustomer = {};
+
+      vm.join = function (currentCustomer) {
+         socket.emit('add-customer', currentCustomer);
+      };
+
+      socket.on('notification', function (data) {
+         $scope.$apply(function () {
+            vm.newCustomers.push(data.customer);
+         });
+         console.log(vm.newCustomers);
+      });
 
    }
 
