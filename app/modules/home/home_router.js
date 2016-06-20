@@ -8,6 +8,8 @@
       ])
       .config(configProvider);
 
+   configProvider.$inject = ['$stateProvider'];
+
    ///////
 
    function configProvider($stateProvider) {
@@ -27,7 +29,5 @@
             }
          });
    }
-
-   configProvider.$inject = ['$stateProvider'];
 
 })();
