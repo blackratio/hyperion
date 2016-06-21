@@ -9,7 +9,8 @@
          title: '=',
          user: '='
       },
-      template: template
+      template: loadComponent,
+      controller: titleCtrl
    });
 
    ////////
@@ -36,6 +37,10 @@
          </div-->
       </div>
       `;
+   }
+
+   function titleCtrl(){
+      console.log('title loaded');
    }
 
 })();
